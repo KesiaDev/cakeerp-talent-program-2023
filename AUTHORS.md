@@ -6,3 +6,4 @@
 
 ## Contributors
 
+Kesia Torelly - <kesiatorelly@gmail.com>
