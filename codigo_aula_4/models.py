@@ -1,6 +1,4 @@
-from sqlalchemy import Column, Integer, String
-
-from database import Base
+from sqlalchemy import Column, Integer, String, Boolean
 
 class Curso(Base):
     __tablename__ = "cursos"
@@ -10,3 +8,5 @@ class Curso(Base):
     descricao: str = Column(String(255), nullable=False)
     carga_horaria: int = Column(Integer, nullable=False)
     qtd_exercicios: int = Column(Integer, nullable=False)
+    active: bool = Column(Boolean, default=True)  
+

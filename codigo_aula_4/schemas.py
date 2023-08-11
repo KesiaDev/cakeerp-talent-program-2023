@@ -1,15 +1,17 @@
 from pydantic import BaseModel
 
-class CursoBase(BaseModel):
-    titulo: str
-    descricao: str
-    carga_horaria: int
-    qtd_exercicios: int
-
-class CursoRequest(CursoBase):
+class AlunoBase(BaseModel):
+    nome: str
+    sobrenome: str
+    email: str
+    idade: int
+    cpf: str
+    id_curso: int  
+    
+class AlunoRequest(AlunoBase):
     ...
 
-class CursoResponse(CursoBase):
+class AlunoResponse(AlunoBase):
     id: int
 
     class Config:

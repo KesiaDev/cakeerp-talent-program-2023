@@ -10,9 +10,15 @@ engine = create_engine(
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
+
+from models import Curso, Aluno
+
 def get_db():
     db = SessionLocal()
     try:
         yield db
     finally:
         db.close()
+
+Base.metadata.create_all(bind=engine)
+
